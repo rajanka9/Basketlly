@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Basketlly</string>
+
+    <!-- Quotes -->
+    <string name="quote1">I am strong.</string>
+    <string name="quote2">I am strong.</string>
+    <string name="quote3">I am strong.</string>
+    <string name="quote4">I am strong.</string>
+    <string name="quote5">I am strong.</string>
+    <string name="quote6">I am strong.</string>
+    <string name="quote7">I am strong.</string>
+    <string name="quote8">I am strong.</string>
+    <string name="quote9">I am strong.</string>
+
 </resources>
