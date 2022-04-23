@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">Basketlly</string>
 
-    <!-- Quotes -->
+
+    <string name="button_let_me_in">Let me in</string>
+    <string name="text_welcome">WELCOME TO BASKETLLY</string>
+
     <string name="quote1">I am strong.</string>
     <string name="quote2">I am strong.</string>
     <string name="quote3">I am strong.</string>

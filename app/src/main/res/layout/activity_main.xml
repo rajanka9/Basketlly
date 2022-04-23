@@ -2,22 +2,44 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:padding="19dp"
+    android:padding="22dp"
     tools:context=".MainActivity">
 
 
+    <!-- sp(Scale Independent Pixel) -->
+
     <Button
-        android:id="@+id/button"
-        android:layout_width="133dp"
+        android:id="@+id/button_let_me_in"
+        android:layout_width="199sp"
         android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
         android:backgroundTint="@color/orange"
-        android:text="Let me in"
-        android:textColorLink="#8AF5FC"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/button_let_me_in"
+        android:textColor="@color/white"
+        android:textColorLink="@color/baby_blue"
+        android:textSize="29sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.784" />
+        app:layout_constraintTop_toBottomOf="@id/text_main"
+        app:layout_constraintVertical_bias="0.784"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/text_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fredoka_one"
+        android:text="@string/text_welcome"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="47sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_let_me_in"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.363"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

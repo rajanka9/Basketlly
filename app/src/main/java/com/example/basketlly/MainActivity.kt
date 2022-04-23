@@ -11,3 +11,15 @@ class MainActivity : AppCompatActivity() {
 
     }
 }
+
+
+// Sources
+/*
+
+*/
+
+
+// Problems
+/*
+    https://stackoverflow.com/questions/69030567/aapt-error-failed-writing-to-path-to-android-project-app-build-intermediates
+*/
