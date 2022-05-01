@@ -2,8 +2,8 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
     <corners
-        android:radius="22sp" />
-    <solid android:color="#3F51B5" />
+        android:radius="26sp" />
+    <solid android:color="#FF00B7" />
 </shape>
 
 <!-- https://medium.com/swlh/rounded-button-in-android-studios-fbd1ee0b3161 -->
