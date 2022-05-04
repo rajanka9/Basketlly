@@ -45,11 +45,11 @@
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_button"
         android:backgroundTint="@color/orange"
-        android:fontFamily="sans-serif-medium"
         android:text="@string/button_let_me_in"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textColorLink="@color/baby_blue"
+        android:fontFamily="sans-serif-medium"
         android:textSize="29sp"
         android:textStyle="bold"
 

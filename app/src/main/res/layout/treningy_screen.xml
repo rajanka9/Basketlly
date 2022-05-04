@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/treningy_screen"
+    >
+
+    <TextView
+        android:id="@+id/text_view_shooting_training"
+        android:layout_width="166sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10sp"
+        android:layout_marginTop="66sp"
+        android:layout_marginBottom="10sp"
+        android:fontFamily="@font/fredoka_one"
+        android:text="Shooting trainings"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/floating_action_button_trainings"
+        app:layout_constraintEnd_toStartOf="@id/basketball_icon_shooting_trainings"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/basketball_icon_shooting_trainings"
+        android:layout_width="80sp"
+        android:layout_height="@id/text_view_shooting_training"
+        android:layout_marginTop="66sp"
+        android:layout_marginEnd="10dp"
+
+        android:layout_marginBottom="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/floating_action_button_trainings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/text_view_shooting_training"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/basketball_black" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_action_button_trainings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:layout_marginBottom="10sp"
+        android:backgroundTint="@color/orange"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/recycler_view_exercise"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_shooting_training"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_exercise"
+        android:layout_width="409sp"
+        android:layout_height="356sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/floating_action_button_trainings"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -36,4 +36,7 @@
     <string name="quote28">\n“Our deepest fear is not that we are inadequate. Our deepest fear is that we are powerful beyond measure” ― Timo Cruz\n</string>
     <string name="quote29">\n“You said we’re a team. One person struggles, we all struggle. One person triumphs, we all triumph.” ― Jason Lyle\n</string>
 
+    <!-- The %s is where the formatted percentage will be inserted.-->
+    <string name="percentage">%s</string>
+
 </resources>

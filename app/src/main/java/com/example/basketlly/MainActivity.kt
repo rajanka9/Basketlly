@@ -10,12 +10,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_main)
         setContentView(R.layout.quotes_screen)
-        val newQuoteButton: Button = findViewById(R.id.button_quotes)
-
-        val q = Quotes()
-        newQuoteButton.setOnClickListener {q.randomQuote()}
-
-
 
     }
 }

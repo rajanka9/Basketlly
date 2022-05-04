@@ -3,6 +3,7 @@ package com.example.basketlly
 
 import android.text.Layout
 import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 
@@ -38,6 +39,10 @@ class Quotes {
 
 
     }
+
+    val newQuoteButton: Button = findViewById(R.id.button_quotes)
+
+    newQuoteButton.setOnClickListener {this.randomQuote()}
 
 }
 
