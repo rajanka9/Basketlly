@@ -13,22 +13,24 @@
 
     <ImageView
         android:id="@+id/basketball_ball_main"
-        android:layout_width="104dp"
-        android:layout_height="90dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="104sp"
+        android:layout_height="90sp"
+        android:layout_marginTop="36sp"
 
-        android:contentDescription="basketball ball"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/basketball_blue" />
+        tools:srcCompat="@drawable/basketball_blue"
+        android:background="@drawable/basketball_blue"
+
+        />
 
     <TextView
         android:id="@+id/text_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="11sp"
         android:fontFamily="@font/fredoka_one"
         android:text="@string/text_welcome"
         android:textAlignment="center"

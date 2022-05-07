@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Basketlly">
+
+        <!-- pridane aby nam nepadala app -->
+        <activity android:name=".Quotes" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

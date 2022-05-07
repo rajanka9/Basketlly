@@ -46,6 +46,9 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     // In the app-level Gradle build file, add the dependency for the Material library
     implementation "com.google.android.material:material:$version"
+
+    //recyclerView implementation
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
 }
 
 /*configurations.all {

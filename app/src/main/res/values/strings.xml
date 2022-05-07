@@ -38,5 +38,6 @@
 
     <!-- The %s is where the formatted percentage will be inserted.-->
     <string name="percentage">%s</string>
+    <string name="basketball_ball">basketball ball</string>
 
 </resources>
