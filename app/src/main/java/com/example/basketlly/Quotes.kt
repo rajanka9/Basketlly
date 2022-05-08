@@ -2,8 +2,6 @@ package com.example.basketlly
 
 
 import android.os.Bundle
-import android.text.Layout
-import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -23,7 +21,6 @@ class Quotes: AppCompatActivity() {
             randomBackground()
             randomQuote()
         }
-
     }
 
     fun randomQuote(){
@@ -51,10 +48,7 @@ class Quotes: AppCompatActivity() {
         val pozadieImage: ImageView = findViewById(R.id.quote_screen)
         //nastavenie idcka
         pozadieImage.setBackgroundResource(pozadie)
-
     }
-    //val newQuoteButton: Button = findViewById(R.id.button_quotes)
-    //newQuoteButton.setOnClickListener {this.randomQuote()}
 }
 
 //generator nahodnych cisel

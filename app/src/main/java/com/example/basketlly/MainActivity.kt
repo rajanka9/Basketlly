@@ -38,3 +38,5 @@ class MainActivity : AppCompatActivity() {
 /*
     https://stackoverflow.com/questions/69030567/aapt-error-failed-writing-to-path-to-android-project-app-build-intermediates
 */
+
+//odporuca sa viewBinding lebo kotlin extensions uz nie su vyvojarmi podporovane (kvazi aich mozeme pouzivat ale ......)

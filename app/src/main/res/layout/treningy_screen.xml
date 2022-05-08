@@ -39,7 +39,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/text_view_shooting_training"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/basketball_black" />
+        app:srcCompat="@drawable/basketball_black"
+        android:contentDescription="@string/basketball_ball" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floating_action_button_trainings"
@@ -53,16 +54,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_view_shooting_training"
-        app:srcCompat="@android:drawable/ic_menu_add" />
+        app:srcCompat="@android:drawable/ic_menu_add"
+        android:contentDescription="buttton for adding" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_exercise"
         android:layout_width="409sp"
         android:layout_height="356sp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/floating_action_button_trainings"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/floating_action_button_trainings" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
