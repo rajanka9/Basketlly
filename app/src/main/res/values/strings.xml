@@ -2,7 +2,7 @@
     <string name="app_name">Basketlly</string>
 
 
-    <string name="button_let_me_in">Let me in</string>
+    <string name="string_button_let_me_in">Let me in</string>
     <string name="text_welcome">WELCOME TO BASKETLLY</string>
     <string name="new_quote">New</string>
 
@@ -37,7 +37,7 @@
     <string name="quote29">\n“You said we’re a team. One person struggles, we all struggle. One person triumphs, we all triumph.” ― Jason Lyle\n</string>
 
     <!-- The %s is where the formatted percentage will be inserted.-->
-    <string name="percentage">%s</string>
+    <string name="percentage">P: %s</string>
     <string name="basketball_ball">basketball ball</string>
     <string name="successful_attempts">Successful attempts</string>
     <string name="all_attempts">All Attempts</string>

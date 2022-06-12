@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Basketlly">
 
-        <!-- pridane aby nam nepadala app -->
-        <activity android:name=".Quotes" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -25,6 +22,21 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <!--
+         pridane aby nam nepadala app
+        + vsetky activity by mali byt v manifeste
+        -->
+        <activity android:name=".Quotes"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".CvicenieScreen"
+            android:screenOrientation="portrait"
+
+            />
+
+
     </application>
 
 </manifest>

@@ -2,25 +2,34 @@ package com.example.basketlly
 
 
 import android.os.Bundle
+import android.text.Layout
+import android.view.View
 import android.widget.Button
-import android.widget.ImageView
+import android.widget.RelativeLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
+
 
 // https://stackoverflow.com/questions/39962816/get-random-images-in-android-studio
 // https://www.youtube.com/playlist?list=PLQkwcJG4YTCTq1raTb5iMuxnEB06J1VHX
 // ctrl + q --> ukaze dokumentaciu
 
 class Quotes: AppCompatActivity() {
+//public class Quotes extends Fragment {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.quotes_screen)
         val buttonNewQuote: Button = findViewById(R.id.button_quotes)
+
         buttonNewQuote.setOnClickListener {
-            //toto nefunguje app spadne !!!
-            randomBackground()
+            /*val toast = Toast.makeText(this, "Here is a new quote!", Toast.LENGTH_SHORT)
+            toast.show()*/
             randomQuote()
-        }
+            randomBackground()
+            }
     }
 
     fun randomQuote(){
@@ -34,7 +43,7 @@ class Quotes: AppCompatActivity() {
         //najdenie idcka
         val vyrokTextovaPodoba: TextView = findViewById(R.id.quote_text)
         //nastavenie idcka
-        vyrokTextovaPodoba.setBackgroundResource(vyrok)
+        vyrokTextovaPodoba.setText(vyrok)
 
     }
 
@@ -45,9 +54,8 @@ class Quotes: AppCompatActivity() {
         val quotePozadie = pozadieGenerator.generuj()
         val pozadie = backrounds[quotePozadie]
         //najdenie idcka
-        val pozadieImage: ImageView = findViewById(R.id.quote_screen)
+        findViewById<ConstraintLayout>(R.id.quotes_screen).setBackgroundResource(pozadie)
         //nastavenie idcka
-        pozadieImage.setBackgroundResource(pozadie)
     }
 }
 
@@ -56,5 +64,4 @@ class Generator(private val pocet: Int) {
     fun generuj(): Int {
         return (1..pocet).random()
     }
-
 }

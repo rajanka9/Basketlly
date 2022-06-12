@@ -18,19 +18,36 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener(){
             //alt + enter import (ale dako to nejde)
             // mame zamer otvorit dalsiu aktivitu
-            Intent(this, Quotes::class.java).also {
+
+            Intent(this, CvicenieScreen::class.java).also {
                 startActivity(it)
             }
 
-
+            /*Intent(this, Quotes::class.java).also {
+                startActivity(it)
+            }*/
+            finish()
         }
+
     }
+
+
 }
 
 
 // Sources
 /*
-    https://www.geeksforgeeks.org/how-to-change-background-image-by-button-clicking-event-in-android/
+    XML
+    round button - https://www.geeksforgeeks.org/how-to-change-background-image-by-button-clicking-event-in-android/
+    navigation - https://www.youtube.com/watch?v=DI0NIk-7cz8
+
+    CODE
+    list https://www.youtube.com/watch?v=KPvYXXERLjk
+    recycler view - https://www.youtube.com/watch?v=-PIKVIJb7Xs
+    activity X fragment - https://www.geeksforgeeks.org/difference-between-a-fragment-and-an-activity-in-android/
+    screen rotaion in manifest - https://www.youtube.com/watch?v=pRg3f0sdHf8
+    data binding - https://www.youtube.com/watch?v=as28MREKz4c&t=337s
+    prechod medzi snimkami - https://www.youtube.com/watch?v=UWqoz5Kln4k
 */
 
 

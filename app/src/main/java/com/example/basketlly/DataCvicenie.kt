@@ -3,9 +3,9 @@ package com.example.basketlly
 import java.io.Serializable
 
 data class DataCvicenie(
-    val nazov : String,
-    val dane : Int,
-    val pokusy : Int,
-    val uspesnost : Int
+    var nazov : String,
+    var dane : Int,
+    var pokusy : Int,
+    var uspesnost : Int = (dane/pokusy)*100
 ) : Serializable // aby sme ju mohli parsovat a posielat medzi aktivitami
 
