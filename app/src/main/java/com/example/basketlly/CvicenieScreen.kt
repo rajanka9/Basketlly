@@ -1,12 +1,8 @@
 package com.example.basketlly
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.widget.Adapter
-import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.example.basketlly.databinding.CvicenieScreenBinding
-import java.text.NumberFormat
 
 //class CvicenieScreenAktivita : Fragment(R.layout.cvicenie_screen){
 
@@ -35,8 +31,8 @@ class CvicenieScreen: AppCompatActivity() {
             //binding.nameAllAttempts.text.toString()
 
 
-        var daneHodnota = daneTextPole.toIntOrNull()
-        var pokusyHodnota = pokusyTextPole.toIntOrNull()
+        val daneHodnota = daneTextPole.toIntOrNull()
+        val pokusyHodnota = pokusyTextPole.toIntOrNull()
 
         if(daneHodnota == null || pokusyHodnota == null || pokusyHodnota == 0) {
             binding.percentageOfExercise.text = ""
@@ -65,7 +61,7 @@ class CvicenieScreen: AppCompatActivity() {
             //displayPercento(daneTextPole,pokusyTextPole)
         //}
 
-        var percento = (daneHodnota.toDouble() / pokusyHodnota * 100).toInt()
+        val percento = (daneHodnota.toDouble() / pokusyHodnota * 100).toInt()
         displayPercento(percento)
     }
 
