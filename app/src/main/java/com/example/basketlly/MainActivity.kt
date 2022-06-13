@@ -19,7 +19,11 @@ class MainActivity : AppCompatActivity() {
             //alt + enter import (ale dako to nejde)
             // mame zamer otvorit dalsiu aktivitu
 
-            Intent(this, CvicenieScreen::class.java).also {
+            /*Intent(this, CvicenieScreen::class.java).also {
+                startActivity(it)
+            }*/
+
+            Intent(this, TreningScreen::class.java).also {
                 startActivity(it)
             }
 
