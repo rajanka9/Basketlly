@@ -26,12 +26,24 @@
         <!--
          pridane aby nam nepadala app
         + vsetky activity by mali byt v manifeste
+
+        screenOrientation aby sa nam neotacala app niektore app to maju takto nastavene naschval (napr. instagram)
         -->
         <activity android:name=".Quotes"
             android:screenOrientation="portrait"
             />
 
-        <activity android:name=".CvicenieScreen"
+        <activity android:name=".cvicenia.CvicenieScreen"
+            android:screenOrientation="portrait"
+
+            />
+
+        <activity android:name=".treningy.TreningyScreen"
+            android:screenOrientation="portrait"
+
+            />
+
+        <activity android:name=".trening.TreningScreen"
             android:screenOrientation="portrait"
 
             />

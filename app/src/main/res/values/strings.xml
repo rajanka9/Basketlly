@@ -3,7 +3,7 @@
 
 
     <string name="string_button_let_me_in">Let me in</string>
-    <string name="text_welcome">WELCOME TO BASKETLLY</string>
+    <string name="text_welcome">Welcome to Basketlly</string>
     <string name="new_quote">New</string>
 
     <string name="quote1">\n“I’ve never lost a game, I just ran out of time.” ― Michael Jordan\n</string>
@@ -41,5 +41,14 @@
     <string name="basketball_ball">basketball ball</string>
     <string name="successful_attempts">Successful attempts</string>
     <string name="all_attempts">All Attempts</string>
+    <string name="item_attempts">%s/%s</string>
+    <string name="item_name_exercise_text">Exercise 1</string>
+    <string name="item_percentage_text">%s</string>
+    <string name="ball_size_3x3">Ball size 3x3</string>
+    <string name="ball_size_7">Ball size 7</string>
+    <string name="ball_size_6">Ball size 6</string>
+    <string name="string_datum_item">29.9.2022</string>
+    <string name="string_name_item">Exercise 1</string>
+    <string name="item_all_items">%s</string>
 
 </resources>

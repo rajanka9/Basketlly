@@ -3,39 +3,45 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/item_execrise_layout"
-    android:layout_width="match_parent"
-    android:layout_height="144sp"
+    android:layout_width="340dp"
+    android:layout_height="110dp"
     android:background="@drawable/layout_boarder_blue"
-    android:layout_margin="10sp"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_gravity="center"
+
     >
 
     <TextView
-        android:id="@+id/item_name_training"
+        android:id="@+id/nameTraining"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
         android:layout_marginStart="29dp"
         android:layout_marginTop="29dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Exercise 1"
+        android:text="@string/string_name_item"
         android:textAlignment="center"
         android:textAllCaps="false"
+        android:layout_gravity="center"
 
         android:textColor="@color/black"
         android:textSize="26sp"
-        app:layout_constraintBottom_toTopOf="@id/item_date_trainig"
+        app:layout_constraintBottom_toTopOf="@id/dateTrainig"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/item_date_trainig"
+        android:id="@+id/dateTrainig"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
 
         android:layout_marginStart="29dp"
         android:layout_marginBottom="29dp"
         android:fontFamily="@font/fredoka_one"
-        android:text="29.9.2022"
+        android:text="@string/string_datum_item"
 
         android:textAlignment="center"
         android:textAllCaps="false"
@@ -43,17 +49,19 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/item_name_training"
+        app:layout_constraintTop_toBottomOf="@+id/nameTraining"
         app:layout_constraintVertical_bias="0.717" />
 
-    <ImageView
-        android:id="@+id/item_image_training"
-        android:layout_width="116sp"
-        android:layout_height="116sp"
+        <ImageView
+        android:id="@+id/imageTraining"
+            android:layout_gravity="center"
+        android:layout_width="110dp"
+        android:layout_height="100dp"
         android:layout_marginEnd="29dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
+    <!-- -->
 </androidx.constraintlayout.widget.ConstraintLayout>

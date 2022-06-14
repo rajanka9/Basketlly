@@ -4,37 +4,45 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.example.basketlly.cvicenia.CvicenieScreen
+import com.example.basketlly.trening.TreningScreen
+import com.example.basketlly.treningy.TreningyScreen
 
 //import android.widget.Button
 
 //testovacie veci
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_main)
         setContentView(R.layout.activity_main)
+
+        /*var treningList = mutableListOf(
+            DataTrening("nazovjdkjs", "29.9.2000", 3),
+            DataTrening ("jhjhbjhb", "29.9.2020", 6),
+            DataTrening("nazovhbjjdkjs", "20.9.2000", 7)
+        )
+
+        val adapter = TreningyAdapter(treningList)
+        val recyclerPohladov = binding.recyclerViewTraining
+        recyclerPohladov.adapter = adapter
+        recyclerPohladov.layoutManager = LinearLayoutManager(this)*/
 
         val button : Button = findViewById(R.id.button_let_me_in)
         button.setOnClickListener(){
             //alt + enter import (ale dako to nejde)
             // mame zamer otvorit dalsiu aktivitu
 
-            /*Intent(this, CvicenieScreen::class.java).also {
-                startActivity(it)
-            }*/
-
-            Intent(this, TreningScreen::class.java).also {
+            Intent(this, TreningyScreen::class.java).also {
                 startActivity(it)
             }
 
-            /*Intent(this, Quotes::class.java).also {
-                startActivity(it)
-            }*/
-            finish()
+           finish()
         }
 
-    }
 
+    }
 
 }
 
@@ -48,6 +56,8 @@ class MainActivity : AppCompatActivity() {
     CODE
     list https://www.youtube.com/watch?v=KPvYXXERLjk
     recycler view - https://www.youtube.com/watch?v=-PIKVIJb7Xs
+                    - https://www.youtube.com/watch?v=HtwDXRWjMcU
+                    - https://www.youtube.com/watch?v=HtwDXRWjMcU&list=PLQkwcJG4YTCTq1raTb5iMuxnEB06J1VHX&index=21
     activity X fragment - https://www.geeksforgeeks.org/difference-between-a-fragment-and-an-activity-in-android/
     screen rotaion in manifest - https://www.youtube.com/watch?v=pRg3f0sdHf8
     data binding - https://www.youtube.com/watch?v=as28MREKz4c&t=337s
@@ -58,6 +68,8 @@ class MainActivity : AppCompatActivity() {
 // Problems
 /*
     https://stackoverflow.com/questions/69030567/aapt-error-failed-writing-to-path-to-android-project-app-build-intermediates
-*/
+
+ */
+
 
 //odporuca sa viewBinding lebo kotlin extensions uz nie su vyvojarmi podporovane (kvazi aich mozeme pouzivat ale ......)

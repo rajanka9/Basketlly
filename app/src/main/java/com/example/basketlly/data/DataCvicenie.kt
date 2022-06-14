@@ -1,4 +1,4 @@
-package com.example.basketlly
+package com.example.basketlly.data
 
 import java.io.Serializable
 

@@ -32,9 +32,10 @@
         android:layout_marginTop="15dp"
         android:fontFamily="@font/fredoka_one"
         android:text="@string/text_welcome"
+        android:textAllCaps="true"
         android:textAlignment="center"
         android:textColor="@color/baby_blue"
-        android:textSize="46dp"
+        android:textSize="44dp"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
