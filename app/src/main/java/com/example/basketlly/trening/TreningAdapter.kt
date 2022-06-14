@@ -6,35 +6,38 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.basketlly.data.DataCvicenie
+import com.example.basketlly.data.database.data.DataCvicenie
+import com.example.basketlly.data.database.data.DataTrening
+import com.example.basketlly.databinding.ItemCvicenieBinding
+import com.example.basketlly.databinding.ItemTreningBinding
 import java.util.ArrayList
 
-class CvicenieAdapter(val c: Context, private val cvicenieList:ArrayList<DataCvicenie>): RecyclerView.Adapter<CvicenieAdapter.cvicenieViewHolder>() {
+class TreningAdapter(
+    val cvicenia: List<DataCvicenie>
+): RecyclerView.Adapter<TreningAdapter.treningViewHolder>() {
 
-    inner class cvicenieViewHolder(val v:View):RecyclerView.ViewHolder(v){
-        val nazov = v.findViewById<TextView>(R.id.item_name_exercise)
-        val dane_a_pokusy = v.findViewById<TextView>(R.id.item_attempts)
-        val percento = v.findViewById<TextView>(R.id.item_percentage)
-
+    inner class treningViewHolder(val binding: ItemCvicenieBinding) : RecyclerView.ViewHolder(binding.root){
         /*internal fun bind(position: Int) {
             // this method will be called anytime a list item is created or updated its data
         }*/
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): cvicenieViewHolder {
-        val inflater = LayoutInflater.from(parent.context)
-        val v = inflater.inflate(R.layout.item_cvicenie, parent, false)
-        return cvicenieViewHolder(v)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): treningViewHolder {
+        val layoutInf = LayoutInflater.from(parent.context)
+        val binding = ItemCvicenieBinding.inflate(layoutInf, parent, false)
+        return treningViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: cvicenieViewHolder, position: Int) {
-        val newList = cvicenieList[position]
-        holder.nazov.text = newList.nazov
-        //getString(holder.dane_a_pokusy.text , newList.dane.toString())
-        holder.percento.text = newList.uspesnost.toString()
+    override fun onBindViewHolder(holder: treningViewHolder, position: Int) {
+        holder.binding.apply {
+            itemNameExercise.text = cvicenia[position].nazov
+            itemSuccAttempts.text = cvicenia[position].dane.toString()
+            itemAllAttempts.text = cvicenia[position].pokusy.toString()
+            itemPercentageHodnota.text = cvicenia[position].percento.toString()
+        }
     }
 
     override fun getItemCount(): Int {
-        return cvicenieList.size
+        return cvicenia.size
     }
 }

@@ -4,9 +4,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.room.Room
+import androidx.room.RoomDatabase
 import com.example.basketlly.R
-import com.example.basketlly.treningy.TreningyScreen
-import com.example.basketlly.data.DataCvicenie
+import com.example.basketlly.data.database.AppDatabase
+import com.example.basketlly.data.database.data.DataCvicenie
 import com.example.basketlly.databinding.CvicenieScreenBinding
 import com.example.basketlly.trening.TreningScreen
 
@@ -28,7 +30,8 @@ class CvicenieScreen: AppCompatActivity() {
             val sendNazov = binding.nameExercise.text
             val sendDane = binding.numberSuccessfulAttempts.text.toString()
             val sendPokusy = binding.numberAllAttempts.text.toString()
-            val dataJednoCviko = DataCvicenie(sendNazov.toString(),sendDane.toInt(), sendPokusy.toInt())
+
+            //val dataJednoCviko = DataCvicenie(sendNazov.toString(),sendDane.toInt(), sendPokusy.toInt())
 
             if (sendNazov.isNotEmpty() && sendDane.toString().isNotEmpty() && sendPokusy.toString().isNotEmpty()
                     && sendPokusy.toInt() != 0 && sendPokusy.toInt() > sendDane.toInt()) {
@@ -36,6 +39,7 @@ class CvicenieScreen: AppCompatActivity() {
                     it.putExtra("EXTRA_DATAJEDNOCVIKO", dataJednoCviko)
                     startActivity(it)
                 }*/
+
 
                    Intent(this, TreningScreen::class.java).also{
                         startActivity(it)
@@ -66,6 +70,8 @@ class CvicenieScreen: AppCompatActivity() {
 
 
     }
+
+
 
     private fun percentoStrelby() {
         //val nazovTextPole = binding.nameExercise.text

@@ -13,7 +13,7 @@
         android:id="@+id/name_exercise"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginTop="44sp"
+        android:layout_marginTop="35dp"
         android:background="@color/baby_blue_light"
         android:ems="12"
         android:inputType="textPersonName"
@@ -133,10 +133,11 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewExercises"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:layout_gravity="center"
-        android:layout_width="400dp"
+        android:layout_width="380dp"
         android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

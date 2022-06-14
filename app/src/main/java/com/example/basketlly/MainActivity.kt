@@ -62,6 +62,10 @@ class MainActivity : AppCompatActivity() {
     screen rotaion in manifest - https://www.youtube.com/watch?v=pRg3f0sdHf8
     data binding - https://www.youtube.com/watch?v=as28MREKz4c&t=337s
     prechod medzi snimkami - https://www.youtube.com/watch?v=UWqoz5Kln4k
+
+    database - https://www.youtube.com/watch?v=8YPXv7xKh2w&t=5297s
+                - https://www.youtube.com/watch?v=2K_eFam0qBg
+                - https://www.youtube.com/watch?v=iTdzBM1zErA
 */
 
 
