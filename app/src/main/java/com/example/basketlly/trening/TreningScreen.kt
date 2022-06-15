@@ -1,65 +1,103 @@
 package com.example.basketlly.trening
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
+import android.os.PersistableBundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.basketlly.R
 import com.example.basketlly.TreningAdapter
 import com.example.basketlly.cvicenia.CvicenieScreen
-import com.example.basketlly.data.database.data.DataCvicenie
-import com.example.basketlly.data.database.data.DataTrening
+import com.example.basketlly.data.DataCvicenie
 import com.example.basketlly.treningy.TreningyScreen
 import com.example.basketlly.databinding.TreningScreenBinding
-import com.example.basketlly.treningy.TreningyAdapter
+import java.util.ArrayList
 
 class TreningScreen: AppCompatActivity() {
 
     private lateinit var binding: TreningScreenBinding
-    //var dataList = arrayListOf<DataCvicenie>()
+    var dataList2 = mutableListOf<DataCvicenie>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = TreningScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val cviceniaList = mutableListOf(
-            DataCvicenie("nazovjdkjs", 45, 90, 50),
-            DataCvicenie("nazovjdkjs", 10, 100, 10),
-            DataCvicenie("nazovjdkjs", 50, 100, 50),
-            DataCvicenie("nazovjdkjs", 45, 90, 50),
-        )
+        val treningNazov = binding.nameExercise.text
+        val treningDatum = binding.trainingDate.text
+        val treningLopta = when (binding.radioGroupBalls.checkedRadioButtonId) {
+            R.id.ball_size_3x3 -> 3
+            R.id.ball_size_7 -> 7
+            else -> 6
+        }
 
-        val adapter = TreningAdapter(cviceniaList)
+        val adapter = TreningAdapter(dataList2)
         val recyclerPohladov2 = binding.recyclerViewExercises
         recyclerPohladov2.adapter = adapter
         recyclerPohladov2.layoutManager = LinearLayoutManager(this)
 
-        binding.btnNewExercise.setOnClickListener{
-            Intent (this, CvicenieScreen::class.java).also { startActivity(it) }
+        dataList2.add(DataCvicenie("xxxxxxxxx","0", "0", "0"))
 
+        val nazov = intent.getStringExtra("EXTRA_SENDDATA").toString()
+        val dane = intent.getStringExtra("EXTRA_SENDDANE").toString()
+        val pokusy = intent.getStringExtra("EXTRA_SENDPOKUSY").toString()
+        val percento = intent.getStringExtra("EXTRA_SENDPERCENTO").toString()
+
+        if (dane.isNullOrEmpty() || pokusy.isNullOrEmpty() || percento.isNullOrEmpty()){
+                val dataCv = DataCvicenie(" ", "0", "0", "0")
         }
 
-        binding.buttonAddTraining.setOnClickListener{
-            Intent (this, TreningyScreen::class.java).also { startActivity(it) }
+        val dataCv = DataCvicenie(nazov, dane, pokusy, percento)
+        dataList2.add(dataCv)
+        adapter.notifyItemInserted(dataList2.size - 1)
 
+        /*if (dane.isNotBlank() || pokusy.isNotBlank() || percento.isNotBlank()) {
+            val dataCv = DataCvicenie(nazov, dane.toInt(), pokusy.toInt(), percento.toInt())
+            dataList2.add(dataCv)
+            adapter.notifyItemInserted(dataList2.size - 1)
+        }*/
+
+        /*val adapter = TreningAdapter(dataList2)
+        val recyclerPohladov2 = binding.recyclerViewExercises
+        recyclerPohladov2.adapter = adapter
+        recyclerPohladov2.layoutManager = LinearLayoutManager(this)*/
+
+        binding.btnNewExercise.setOnClickListener {
+            Intent(this, CvicenieScreen::class.java).also { startActivity(it) }
+        }
+
+        binding.buttonAddTraining.setOnClickListener {
+            Intent(this, TreningyScreen::class.java).also {
+                it.putExtra("EXTRA_TRENINGNAZOV", treningNazov)
+                it.putExtra("EXTRA_TRENINGDATUM", treningDatum)
+                it.putExtra("EXTRA_TRENINGLOPTA", treningLopta)
+
+                startActivity(it)
+
+            }
             finish()
+
+
         }
 
-        //val recyclerView=binding.recyclerViewExercises
 
-       // val dataJednoCviko = intent.getSerializableExtra("EXTRA_DATAJEDNOCVIKO") as DataCvicenie
 
-        //val data = arrayListOf<DataCvicenie>()
-        //dataList.add(DataCvicenie(dataJednoCviko.nazov, dataJednoCviko.dane, dataJednoCviko.pokusy))
+    }
 
-        //val adapter = CvicenieAdapter(this, dataList)
+    override fun onSaveInstanceState(outState: Bundle) {
+            super.onSaveInstanceState(outState)
+            Log.i(TAG, "onSaveInstanceState")
 
-        //data.add(DataCvicenie("cesta okolo sveta", 25, 50))
-        //data.add(DataCvicenie("cesta okolo sveta2", 25, 100))
+        }
 
-        //recyclerView.adapter = adapter
-        //recyclerView.layoutManager = LinearLayoutManager(this)
+    override fun onBackPressed() {
+        super.onBackPressed()
 
     }
 
 }
+
+

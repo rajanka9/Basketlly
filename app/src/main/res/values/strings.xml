@@ -2,7 +2,7 @@
     <string name="app_name">Basketlly</string>
 
 
-    <string name="string_button_let_me_in">Let me in</string>
+    <string name="string_button_training">+ Training</string>
     <string name="text_welcome">Welcome to Basketlly</string>
     <string name="new_quote">New</string>
 
@@ -50,5 +50,6 @@
     <string name="string_datum_item">29.9.2022</string>
     <string name="string_name_item">Exercise 1</string>
     <string name="item_all_items">%s</string>
+    <string name="string_quote_button_training">+ Training</string>
 
 </resources>

@@ -1,13 +1,14 @@
-package com.example.basketlly.data.database
+/*
+package com.example.basketlly.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.basketlly.data.database.dao.CvicenieDao
-import com.example.basketlly.data.database.dao.TreningDao
-import com.example.basketlly.data.database.data.DataCvicenie
-import com.example.basketlly.data.database.data.DataTrening
+import com.example.basketlly.database.dao.CvicenieDao
+import com.example.basketlly.database.dao.TreningDao
+import com.example.basketlly.data.DataCvicenie
+import com.example.basketlly.data.DataTrening
 
 @Database(
     entities = [DataCvicenie::class, DataTrening::class],
@@ -43,4 +44,5 @@ abstract  class AppDatabase : RoomDatabase() {
     }
 
 }
+*/
 

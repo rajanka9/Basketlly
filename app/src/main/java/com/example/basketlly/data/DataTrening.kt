@@ -1,7 +1,4 @@
-package com.example.basketlly.data.database.data
-
-import androidx.room.Entity
-import androidx.room.PrimaryKey
+package com.example.basketlly.data
 
 /*
 @Entity
@@ -12,10 +9,9 @@ data class DataTrening(
     @PrimaryKey val id: Int? = null
 ) //: Serializable*/
 
-
+import java.io.Serializable
 data class DataTrening(
     val nazov : String,
     val datum : String,
-    val lopta : Int,
-    //@PrimaryKey val id: Int? = null
-) //: Serializable
+    val lopta : Int
+) : Serializable

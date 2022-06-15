@@ -1,8 +1,9 @@
-package com.example.basketlly.data.database.repository
+/*
+package com.example.basketlly.database.repository
 
-import com.example.basketlly.data.database.dao.CvicenieDao
-import com.example.basketlly.data.database.dao.TreningDao
-import com.example.basketlly.data.database.data.DataTrening
+import com.example.basketlly.database.dao.CvicenieDao
+import com.example.basketlly.database.dao.TreningDao
+import com.example.basketlly.data.DataTrening
 import kotlinx.coroutines.flow.Flow
 
 class ImplTrenRepos (
@@ -23,4 +24,4 @@ class ImplTrenRepos (
     override suspend fun deleteTrening(dataTrening: DataTrening) {
         dao.deleteTrening(dataTrening)
     }
-}
+}*/

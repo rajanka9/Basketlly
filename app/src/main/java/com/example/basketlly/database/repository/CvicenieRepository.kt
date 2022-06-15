@@ -1,6 +1,7 @@
-package com.example.basketlly.data.database.repository
+/*
+package com.example.basketlly.database.repository
 
-import com.example.basketlly.data.database.data.DataCvicenie
+import com.example.basketlly.data.DataCvicenie
 import kotlinx.coroutines.flow.Flow
 
 interface CvicenieRepository {
@@ -11,4 +12,4 @@ interface CvicenieRepository {
 
     suspend fun insertCvicenie(dataCvicenie: DataCvicenie)
 
-    suspend fun deleteCvicenie(dataCvicenie: DataCvicenie)}
+    suspend fun deleteCvicenie(dataCvicenie: DataCvicenie)}*/

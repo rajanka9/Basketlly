@@ -1,10 +1,11 @@
-package com.example.basketlly.data.database.repository
+/*
+package com.example.basketlly.database.repository
 
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.example.basketlly.data.database.data.DataTrening
+import com.example.basketlly.data.DataTrening
 import kotlinx.coroutines.flow.Flow
 
 interface TreningRepository {
@@ -16,4 +17,4 @@ interface TreningRepository {
     suspend fun insertTrening(dataTrening: DataTrening)
 
     suspend fun deleteTrening(dataTrening: DataTrening)
-}
+}*/

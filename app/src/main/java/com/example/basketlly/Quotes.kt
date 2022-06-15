@@ -1,15 +1,14 @@
 package com.example.basketlly
 
-
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
-import android.text.Layout
-import android.view.View
 import android.widget.Button
-import android.widget.RelativeLayout
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.example.basketlly.treningy.TreningyScreen
+import java.io.File
 
 
 // https://stackoverflow.com/questions/39962816/get-random-images-in-android-studio
@@ -23,13 +22,23 @@ class Quotes: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.quotes_screen)
         val buttonNewQuote: Button = findViewById(R.id.button_quotes)
+        val buttonQuoteTrainin: Button = findViewById(R.id.button_quote_training)
 
         buttonNewQuote.setOnClickListener {
             /*val toast = Toast.makeText(this, "Here is a new quote!", Toast.LENGTH_SHORT)
             toast.show()*/
             randomQuote()
             randomBackground()
+
             }
+
+        buttonQuoteTrainin.setOnClickListener {
+            Intent(this, TreningyScreen::class.java).also {
+                startActivity(it)
+            }
+
+            finish()
+        }
     }
 
     fun randomQuote(){
@@ -65,3 +74,29 @@ class Generator(private val pocet: Int) {
         return (1..pocet).random()
     }
 }
+
+/*fun deleteCache(context: Context) {
+    try {
+        val dir: File = context.getCacheDir()
+        deleteDir(dir)
+    } catch (e: Exception) {
+        e.printStackTrace()
+    }
+}
+
+fun deleteDir(dir: File?): Boolean {
+    return if (dir != null && dir.isDirectory()) {
+        val children: Array<String> = dir.list()
+        for (i in children.indices) {
+            val success = deleteDir(File(dir, children[i]))
+            if (!success) {
+                return false
+            }
+        }
+        dir.delete()
+    } else if (dir != null && dir.isFile()) {
+        dir.delete()
+    } else {
+        false
+    }
+}*/

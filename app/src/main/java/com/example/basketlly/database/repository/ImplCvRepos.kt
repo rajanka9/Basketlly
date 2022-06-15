@@ -1,7 +1,8 @@
-package com.example.basketlly.data.database.repository
+/*
+package com.example.basketlly.database.repository
 
-import com.example.basketlly.data.database.dao.CvicenieDao
-import com.example.basketlly.data.database.data.DataCvicenie
+import com.example.basketlly.database.dao.CvicenieDao
+import com.example.basketlly.data.DataCvicenie
 import kotlinx.coroutines.flow.Flow
 
 class ImplCvRepos (
@@ -22,4 +23,4 @@ class ImplCvRepos (
     override suspend fun deleteCvicenie(dataCvicenie: DataCvicenie) {
         dao.deleteCvicenie(dataCvicenie)
     }
-}
+}*/

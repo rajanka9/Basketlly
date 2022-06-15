@@ -1,10 +1,11 @@
-package com.example.basketlly.data.database.dao
+/*
+package com.example.basketlly.database.dao
 
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.example.basketlly.data.database.data.DataTrening
+import com.example.basketlly.data.DataTrening
 import kotlinx.coroutines.flow.Flow
 
 interface TreningDao {
@@ -20,4 +21,4 @@ interface TreningDao {
 
     @Delete
     suspend fun deleteTrening(dataTrening: DataTrening)
-}
+}*/

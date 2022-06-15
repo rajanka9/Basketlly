@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.basketlly.R
-import com.example.basketlly.data.database.data.DataTrening
+import com.example.basketlly.data.DataTrening
 import com.example.basketlly.databinding.ItemTreningBinding
 
 class TreningyAdapter(
@@ -28,13 +28,13 @@ class TreningyAdapter(
             nameTraining.text = treningy[position].nazov
             dateTrainig.text = treningy[position].datum
 
-            val obrazky = arrayOf(R.drawable.basketball_black, R.drawable.basketball_blue, R.drawable.basketball_orange)
+            val obrazky = arrayOf(R.drawable.background, R.drawable.background_2, R.drawable.background_3)
 
-            when (treningy[position].lopta) {
+            /*when (treningy[position].lopta) {
                 6 -> imageTraining.setImageResource(obrazky[1])
                 7 -> imageTraining.setImageResource(obrazky[2])
                 3 -> imageTraining.setImageResource(obrazky[3])
-            }
+            }*/ // na tomto to pada
         }
     }
 

@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         recyclerPohladov.adapter = adapter
         recyclerPohladov.layoutManager = LinearLayoutManager(this)*/
 
-        val button : Button = findViewById(R.id.button_let_me_in)
+        val button : Button = findViewById(R.id.button_training)
         button.setOnClickListener(){
             //alt + enter import (ale dako to nejde)
             // mame zamer otvorit dalsiu aktivitu
@@ -38,8 +38,18 @@ class MainActivity : AppCompatActivity() {
                 startActivity(it)
             }
 
-           finish()
         }
+
+        val button2 : Button = findViewById(R.id.button_quotes)
+        button2.setOnClickListener {
+            Intent(this, Quotes::class.java).also {
+                startActivity(it)
+            }
+
+            finish()
+        }
+
+
 
 
     }
@@ -62,10 +72,13 @@ class MainActivity : AppCompatActivity() {
     screen rotaion in manifest - https://www.youtube.com/watch?v=pRg3f0sdHf8
     data binding - https://www.youtube.com/watch?v=as28MREKz4c&t=337s
     prechod medzi snimkami - https://www.youtube.com/watch?v=UWqoz5Kln4k
+    passing data between activities - https://www.youtube.com/watch?v=IWXYV1dC2FQ
 
     database - https://www.youtube.com/watch?v=8YPXv7xKh2w&t=5297s
                 - https://www.youtube.com/watch?v=2K_eFam0qBg
                 - https://www.youtube.com/watch?v=iTdzBM1zErA
+
+
 */
 
 

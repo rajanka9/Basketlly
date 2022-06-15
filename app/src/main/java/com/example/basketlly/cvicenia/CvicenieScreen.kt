@@ -4,11 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.room.Room
-import androidx.room.RoomDatabase
 import com.example.basketlly.R
-import com.example.basketlly.data.database.AppDatabase
-import com.example.basketlly.data.database.data.DataCvicenie
+import com.example.basketlly.data.DataCvicenie
+//import com.example.basketlly.database.AppDatabase
 import com.example.basketlly.databinding.CvicenieScreenBinding
 import com.example.basketlly.trening.TreningScreen
 
@@ -19,7 +17,6 @@ class CvicenieScreen: AppCompatActivity() {
 
     private lateinit var binding: CvicenieScreenBinding
 
-    //private var dataCvicenie:
     override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             binding = CvicenieScreenBinding.inflate(layoutInflater)
@@ -27,23 +24,23 @@ class CvicenieScreen: AppCompatActivity() {
 
         binding.buttonPercentageExercise.setOnClickListener{ percentoStrelby() }
         binding.buttonAddExercise.setOnClickListener{
-            val sendNazov = binding.nameExercise.text
+            val sendNazov = binding.nameExercise.text.toString()
             val sendDane = binding.numberSuccessfulAttempts.text.toString()
             val sendPokusy = binding.numberAllAttempts.text.toString()
-
-            //val dataJednoCviko = DataCvicenie(sendNazov.toString(),sendDane.toInt(), sendPokusy.toInt())
+            val sendPercento = (sendDane.toDouble() / sendPokusy.toInt() * 100).toInt()
+            //val infoCvicenie = DataCvicenie(sendNazov, sendDane.toInt(), sendPokusy.toInt(), sendPercento)
+            val infoCvicenie = DataCvicenie(sendNazov, sendDane, sendPokusy, sendPercento.toString())
 
             if (sendNazov.isNotEmpty() && sendDane.toString().isNotEmpty() && sendPokusy.toString().isNotEmpty()
                     && sendPokusy.toInt() != 0 && sendPokusy.toInt() > sendDane.toInt()) {
-                /*Intent(this, TreningScreen::class.java).also {
-                    it.putExtra("EXTRA_DATAJEDNOCVIKO", dataJednoCviko)
+
+                Intent(this, TreningScreen::class.java).also {
+                    it.putExtra("EXTRA_SENDDATA", sendNazov)
+                    it.putExtra("EXTRA_SENDDANE", sendDane)
+                    it.putExtra("EXTRA_SENDPOKUSY", sendPokusy)
+                    it.putExtra("EXTRA_SENDPERCENTO", sendPercento.toString())
                     startActivity(it)
-                }*/
-
-
-                   Intent(this, TreningScreen::class.java).also{
-                        startActivity(it)
-                    }
+                }
                 finish()
             }
 
@@ -58,20 +55,9 @@ class CvicenieScreen: AppCompatActivity() {
                 toast.show()
                 return@setOnClickListener
             }
-
-            if (sendNazov.isNullOrEmpty() && sendDane.isNullOrEmpty() && sendPokusy.isNullOrEmpty()) {
-                val toast = Toast.makeText(this, "Chyba :(", Toast.LENGTH_SHORT)
-                toast.show()
-                return@setOnClickListener
-            }
-
-
         }
 
-
     }
-
-
 
     private fun percentoStrelby() {
         //val nazovTextPole = binding.nameExercise.text

@@ -1,8 +1,9 @@
-package com.example.basketlly.data.database.dao
+/*
+package com.example.basketlly.database.dao
 
 import androidx.room.*
 import kotlinx.coroutines.flow.Flow
-import com.example.basketlly.data.database.data.DataCvicenie
+import com.example.basketlly.data.DataCvicenie
 
 @Dao
 interface CvicenieDao {
@@ -21,4 +22,4 @@ interface CvicenieDao {
     suspend fun deleteCvicenie(dataCvicenie: DataCvicenie)
 
 
-}
+}*/

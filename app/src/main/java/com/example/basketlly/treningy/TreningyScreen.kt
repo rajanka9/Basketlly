@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.basketlly.data.database.data.DataTrening
+import com.example.basketlly.data.DataTrening
 import com.example.basketlly.databinding.TreningyScreenBinding
 import com.example.basketlly.trening.TreningScreen
 
