@@ -17,7 +17,7 @@ import com.example.basketlly.trening.TreningScreen
 // Zdroje:
 // - app ktora nam vypocita percento z "tipu" z 4teho cicenia
 
-/*
+/**
     prechod medzi snimkami - https://www.youtube.com/watch?v=UWqoz5Kln4k
     passing data between activities - https://www.youtube.com/watch?v=IWXYV1dC2FQ
     activity X fragment - https://www.geeksforgeeks.org/difference-between-a-fragment-and-an-activity-in-android/
@@ -27,6 +27,10 @@ class CvicenieScreen: AppCompatActivity() {
 
     private lateinit var binding: CvicenieScreenBinding
 
+    /**
+     * Vytvara onCreate
+     * @param Bundle
+     * */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = CvicenieScreenBinding.inflate(layoutInflater)

@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+
+    //id 'org.jetbrains.dokka'
 }
 
 android {
@@ -43,6 +45,7 @@ android {
 
 dependencies {
 
+
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.5.0'
@@ -68,6 +71,6 @@ dependencies {
     // Kotlin Extensions and Coroutines support for Room database
     implementation "androidx.room:room-ktx:2.4.2"
 
-    // pridane na pass data to previous activity
+
 }
 

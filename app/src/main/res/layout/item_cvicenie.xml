@@ -50,11 +50,11 @@
 
     <TextView
         android:id="@+id/item_lomene"
-        android:layout_width="7dp"
-        android:layout_height="21dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
         android:fontFamily="@font/fredoka_one"
-        android:text="@string/lomitko"
+        android:text="/"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="@color/black"

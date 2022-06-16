@@ -29,8 +29,6 @@ class TreningyScreen: AppCompatActivity() {
         recyclerPohladov.adapter = adapter
         recyclerPohladov.layoutManager = LinearLayoutManager(this)
 
-        treningyList.add(DataTrening("xxxxxxxxx", "30.2.2000", "3x3"))
-        treningyList.add(DataTrening("xxxxxxxxx", "30.2.2000", "6"))
         treningyList.add(DataTrening("xxxxxxxxx", "30.2.2000", "7"))
 
         val nazovTren = intent.getStringExtra("EXTRA_TRENINGNAZOV").toString()
