@@ -18,19 +18,19 @@ import com.example.basketlly.trening.TreningScreen
 // - app ktora nam vypocita percento z "tipu" z 4teho cicenia
 
 /**
-    prechod medzi snimkami - https://www.youtube.com/watch?v=UWqoz5Kln4k
-    passing data between activities - https://www.youtube.com/watch?v=IWXYV1dC2FQ
-    activity X fragment - https://www.geeksforgeeks.org/difference-between-a-fragment-and-an-activity-in-android/
-
-*/
+ * Cvicenie screen
+ *
+ * @constructor Create empty Cvicenie screen
+ */
 class CvicenieScreen: AppCompatActivity() {
 
     private lateinit var binding: CvicenieScreenBinding
 
     /**
-     * Vytvara onCreate
-     * @param Bundle
-     * */
+     * On create
+     *
+     * @param savedInstanceState
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = CvicenieScreenBinding.inflate(layoutInflater)
@@ -79,6 +79,10 @@ class CvicenieScreen: AppCompatActivity() {
         }
     }
 
+    /**
+     * Percento strelby
+     *
+     */
     private fun percentoStrelby() {
         //val nazovTextPole = binding.nameExercise.text
         val daneTextPole = binding.numberSuccessfulAttempts.text.toString()
@@ -126,6 +130,12 @@ class CvicenieScreen: AppCompatActivity() {
         displayPercento(percento)
     }
 
+
+    /**
+     * Display percento
+     *
+     * @param percento
+     */
     private fun displayPercento(percento: Int) {
         binding.percentageOfExercise.text =
             getString(R.string.percentage, percento.toString() + "%")

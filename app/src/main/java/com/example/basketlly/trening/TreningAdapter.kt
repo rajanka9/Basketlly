@@ -18,12 +18,27 @@ class TreningAdapter(
 
     inner class treningViewHolder(val binding: ItemCvicenieBinding) : RecyclerView.ViewHolder(binding.root)
 
+
+    /**
+     * On create view holder
+     *
+     * @param parent
+     * @param viewType
+     * @return
+     */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): treningViewHolder {
         val layoutInf = LayoutInflater.from(parent.context)
         val binding = ItemCvicenieBinding.inflate(layoutInf, parent, false)
         return treningViewHolder(binding)
     }
 
+
+    /**
+     * On bind view holder
+     *
+     * @param holder
+     * @param position
+     */
     override fun onBindViewHolder(holder: treningViewHolder, position: Int) {
         holder.binding.apply {
             itemNameExercise.text = cvicenia[position].nazov
@@ -33,6 +48,12 @@ class TreningAdapter(
         }
     }
 
+
+    /**
+     * Get item count
+     *
+     * @return
+     */
     override fun getItemCount(): Int {
         return cvicenia.size
     }

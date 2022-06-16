@@ -19,6 +19,12 @@ class TreningyScreen: AppCompatActivity() {
     private lateinit var binding: TreningyScreenBinding
     var treningyList = mutableListOf<DataTrening>()
 
+
+    /**
+     * On create
+     *
+     * @param savedInstanceState
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = TreningyScreenBinding.inflate(layoutInflater)
@@ -46,6 +52,11 @@ class TreningyScreen: AppCompatActivity() {
         }
     }
 
+    /**
+     * On save instance state
+     *
+     * @param outState
+     */
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         Log.i(ContentValues.TAG, "onSaveInstanceState")

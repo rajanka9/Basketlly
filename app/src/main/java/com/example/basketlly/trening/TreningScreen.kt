@@ -17,11 +17,22 @@ import com.example.basketlly.databinding.TreningScreenBinding
 // Trieda TreningScreen nam nacita data z predchadzajucej aktivity a pomocou recyclerView nam ich zobrazi
 // dalej si vie user zaznamenat s akou loptou dany trening vykonaval, ako sa vola trening a v aky den ho odtrenoval
 
+/**
+ * Trening screen
+ *
+ * @constructor Create empty Trening screen
+ */
 class TreningScreen: AppCompatActivity() {
 
     private lateinit var binding: TreningScreenBinding
     var cviceniaList = mutableListOf<DataCvicenie>()
 
+
+    /**
+     * On create
+     *
+     * @param savedInstanceState
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = TreningScreenBinding.inflate(layoutInflater)
@@ -82,6 +93,13 @@ class TreningScreen: AppCompatActivity() {
         }
 
     }
+
+
+    /**
+     * On save instance state
+     *
+     * @param outState
+     */
 
     override fun onSaveInstanceState(outState: Bundle) {
             super.onSaveInstanceState(outState)

@@ -20,13 +20,27 @@ class TreningyAdapter(
 
     inner class TreningyViewHolder(val binding: ItemTreningBinding) : RecyclerView.ViewHolder(binding.root)
 
-    // to inflate the layout
+
+    /**
+     * On create view holder
+     *
+     * @param parent
+     * @param viewType
+     * @return
+     */// to inflate the layout
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TreningyViewHolder {
         val layoutInf = LayoutInflater.from(parent.context)
         val binding = ItemTreningBinding.inflate(layoutInf, parent, false)
         return TreningyViewHolder(binding)
     }
 
+
+    /**
+     * On bind view holder
+     *
+     * @param holder
+     * @param position
+     */
     override fun onBindViewHolder(holder: TreningyViewHolder, position: Int) {
         holder.binding.apply {
             nameTraining.text = treningy[position].nazov
@@ -42,6 +56,12 @@ class TreningyAdapter(
         }
     }
 
+
+    /**
+     * Get item count
+     *
+     * @return
+     */
     override fun getItemCount(): Int {
         return treningy.size
     }

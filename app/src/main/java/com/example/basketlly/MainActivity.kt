@@ -10,6 +10,11 @@ import com.example.basketlly.treningy.TreningyScreen
 
 class MainActivity : AppCompatActivity() {
 
+    /**
+     * On create
+     *
+     * @param savedInstanceState
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

@@ -16,9 +16,19 @@ import java.io.File
 // https://www.youtube.com/playlist?list=PLQkwcJG4YTCTq1raTb5iMuxnEB06J1VHX
 // ctrl + q --> ukaze dokumentaciu
 
+/**
+ * Quotes
+ *
+ * @constructor Create empty Quotes
+ */
 class Quotes: AppCompatActivity() {
 //public class Quotes extends Fragment {
 
+    /**
+     * On create
+     *
+     * @param savedInstanceState
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.quotes_screen)
@@ -42,6 +52,11 @@ class Quotes: AppCompatActivity() {
         }
     }
 
+
+    /**
+     * Random quote
+     *
+     */
     fun randomQuote(){
         // vrati nahodny vyrok
         val vyroky = arrayOf(R.string.quote1, R.string.quote2, R.string.quote3, R.string.quote4, R.string.quote5, R.string.quote6, R.string.quote7, R.string.quote8, R.string.quote9,
@@ -57,6 +72,11 @@ class Quotes: AppCompatActivity() {
 
     }
 
+
+    /**
+     * Random background
+     *
+     */
     fun randomBackground(){
         // vrati nahodne pozadie
         val backrounds = arrayOf(R.drawable.background_1, R.drawable.background_2, R.drawable.background_3, R.drawable.background_4, R.drawable.background_5, R.drawable.background_6, R.drawable.background_7)
@@ -69,8 +89,19 @@ class Quotes: AppCompatActivity() {
     }
 }
 
-//generator nahodnych cisel
+
+/**
+ * Generator
+ *
+ * @property pocet
+ * @constructor Create empty Generator
+ *///generator nahodnych cisel
 class Generator(private val pocet: Int) {
+    /**
+     * Generuj
+     *
+     * @return
+     */
     fun generuj(): Int {
         return (1..pocet).random()
     }

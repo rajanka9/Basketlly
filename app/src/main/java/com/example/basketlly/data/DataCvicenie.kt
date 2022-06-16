@@ -12,6 +12,7 @@ data class DataCvicenie(
 )*/
 
 // Datova trieda sluzi na uchovavanie dat
+
 import java.io.Serializable
 data class DataCvicenie (
     val nazov : String,
