@@ -11,15 +11,12 @@ data class DataCvicenie(
     @PrimaryKey val id: Int? = null
 )*/
 
+// Datova trieda sluzi na uchovavanie dat
 import java.io.Serializable
 data class DataCvicenie (
     val nazov : String,
-    /*val dane : Int,
-    val pokusy : Int,
-    val percento : Int*/
-
     val dane : String,
     val pokusy : String,
     val percento : String
-): Serializable // aby sme ju mohli parsovat a posielat medzi aktivitami
+): Serializable // pridavanie Serializable aby sme ju mohli parsovat a posielat medzi aktivitami
 

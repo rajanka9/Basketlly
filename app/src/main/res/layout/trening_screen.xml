@@ -5,19 +5,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     android:id="@+id/trening_screen"
     >
 
     <EditText
         android:id="@+id/name_exercise"
         android:layout_width="wrap_content"
-        android:layout_height="48dp"
+        android:layout_height="40dp"
         android:layout_marginTop="44dp"
         android:background="@color/baby_blue_light"
         android:ems="12"
         android:inputType="textPersonName"
-        android:text=" Exercise 1"
+        android:hint="@string/string_training_excercise"
         app:layout_constraintBottom_toTopOf="@id/training_date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,12 +26,13 @@
         android:id="@+id/training_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
         android:background="@color/baby_blue_light"
         android:ems="10"
         android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:text=" Date"
+        android:minHeight="40dp"
+        android:hint="@string/string_training_date"
         app:layout_constraintBottom_toTopOf="@+id/text_view_ball"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/fredoka_one"
-        android:text="Size of ball"
+        android:text="@string/size_of_ball"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="@color/black"
@@ -58,37 +58,40 @@
         android:id="@+id/radio_group_balls"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="65dp"
+        android:checkedButton="@id/ball_size_3x3"
         android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewExercises"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_view_ball"
-        android:checkedButton="@id/ball_size_3x3"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/text_view_ball">
+
         <RadioButton
             android:id="@+id/ball_size_3x3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/ball_size_3x3"
             android:fontFamily="sans-serif-medium"
+            android:text="@string/ball_size_3x3"
             android:textSize="19sp"
-            android:textStyle="normal"
-            />
+            android:textStyle="normal" />
+
         <RadioButton
             android:id="@+id/ball_size_7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/ball_size_7"
             android:fontFamily="sans-serif-medium"
+            android:text="@string/ball_size_7"
             android:textSize="19sp"
-            android:textStyle="normal"/>
+            android:textStyle="normal" />
+
         <RadioButton
             android:id="@+id/ball_size_6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/ball_size_6"
             android:fontFamily="sans-serif-medium"
+            android:text="@string/ball_size_6"
             android:textSize="19sp"
-            android:textStyle="normal"/>
+            android:textStyle="normal" />
     </RadioGroup>
 
     <Button
@@ -101,7 +104,7 @@
         android:background="@drawable/rounded_button"
         android:backgroundTint="@color/orange"
         android:fontFamily="sans-serif-medium"
-        android:text="Add"
+        android:text="@string/add"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textColorLink="@color/baby_blue"
@@ -121,11 +124,11 @@
         android:background="@drawable/rounded_button"
         android:backgroundTint="@color/baby_blue"
         android:fontFamily="sans-serif-medium"
-        android:text="+"
+        android:text="@string/plus"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textColorLink="@color/orange"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/recyclerViewExercises"
         app:layout_constraintEnd_toStartOf="@+id/button_add_training"

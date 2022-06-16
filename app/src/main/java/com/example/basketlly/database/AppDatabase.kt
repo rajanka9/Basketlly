@@ -1,3 +1,6 @@
+// Problem Room Databazy
+// Snazila som sa o vytvorenie databazy bohuzial som na vysledne riesenie neprisla do stanoveneho terminu odovzdavania semestralnej prace
+
 /*
 package com.example.basketlly.database
 

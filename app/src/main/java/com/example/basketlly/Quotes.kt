@@ -10,6 +10,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.basketlly.treningy.TreningyScreen
 import java.io.File
 
+// Trieda Quotes je aktivitou, ktora nam nahodne prepina medzi random vyrokmi a pozadim
 
 // https://stackoverflow.com/questions/39962816/get-random-images-in-android-studio
 // https://www.youtube.com/playlist?list=PLQkwcJG4YTCTq1raTb5iMuxnEB06J1VHX

@@ -10,29 +10,40 @@ import com.example.basketlly.data.DataCvicenie
 import com.example.basketlly.databinding.CvicenieScreenBinding
 import com.example.basketlly.trening.TreningScreen
 
+
+// Trieda CvicenieScreen je aktivitou kedy nam po zadani cisel (dane a pokusy strelby) vrati ich percento
+// Dalej tato trieda posiela tieto data do dalsej aktivity
+
 // Zdroje:
 // - app ktora nam vypocita percento z "tipu" z 4teho cicenia
-// Passing data between activities - https://www.youtube.com/watch?v=IWXYV1dC2FQ
+
+/*
+    prechod medzi snimkami - https://www.youtube.com/watch?v=UWqoz5Kln4k
+    passing data between activities - https://www.youtube.com/watch?v=IWXYV1dC2FQ
+    activity X fragment - https://www.geeksforgeeks.org/difference-between-a-fragment-and-an-activity-in-android/
+
+*/
 class CvicenieScreen: AppCompatActivity() {
 
     private lateinit var binding: CvicenieScreenBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-            super.onCreate(savedInstanceState)
-            binding = CvicenieScreenBinding.inflate(layoutInflater)
-            setContentView(binding.root)
+        super.onCreate(savedInstanceState)
+        binding = CvicenieScreenBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        binding.buttonPercentageExercise.setOnClickListener{ percentoStrelby() }
-        binding.buttonAddExercise.setOnClickListener{
+        binding.buttonPercentageExercise.setOnClickListener { percentoStrelby() }
+
+        binding.buttonAddExercise.setOnClickListener {
             val sendNazov = binding.nameExercise.text.toString()
             val sendDane = binding.numberSuccessfulAttempts.text.toString()
             val sendPokusy = binding.numberAllAttempts.text.toString()
             val sendPercento = (sendDane.toDouble() / sendPokusy.toInt() * 100).toInt()
-            //val infoCvicenie = DataCvicenie(sendNazov, sendDane.toInt(), sendPokusy.toInt(), sendPercento)
-            val infoCvicenie = DataCvicenie(sendNazov, sendDane, sendPokusy, sendPercento.toString())
 
-            if (sendNazov.isNotEmpty() && sendDane.toString().isNotEmpty() && sendPokusy.toString().isNotEmpty()
-                    && sendPokusy.toInt() != 0 && sendPokusy.toInt() > sendDane.toInt()) {
+            if (sendNazov.isNotEmpty() && sendDane.toString().isNotEmpty() && sendPokusy.toString()
+                    .isNotEmpty()
+                && sendPokusy.toInt() != 0 && sendPokusy.toInt() > sendDane.toInt()
+            ) {
 
                 Intent(this, TreningScreen::class.java).also {
                     it.putExtra("EXTRA_SENDDATA", sendNazov)
@@ -42,21 +53,26 @@ class CvicenieScreen: AppCompatActivity() {
                     startActivity(it)
                 }
                 finish()
-            }
+            } else {
 
-            if (sendNazov.isNullOrEmpty() || sendDane.isNullOrEmpty() || sendPokusy.isNullOrEmpty()) {
-                val toast = Toast.makeText(this, "Please, fill each text field :)", Toast.LENGTH_SHORT)
-                toast.show()
-                return@setOnClickListener
-            }
+                if (sendPokusy.toInt() == 0) {
+                    val toast = Toast.makeText(this, "Division by zero!", Toast.LENGTH_SHORT)
+                    toast.show()
+                    return@setOnClickListener
+                }
 
-            if (sendPokusy.toInt() == 0) {
-                val toast = Toast.makeText(this, "Division by zero!", Toast.LENGTH_SHORT)
-                toast.show()
-                return@setOnClickListener
+                if (sendDane.toInt() > sendPokusy.toInt() && sendPokusy.toInt() != 0) {
+                    val toast =
+                        Toast.makeText(this, "successful > all --> mistake!", Toast.LENGTH_SHORT)
+                    toast.show()
+
+                    return@setOnClickListener
+                }
+
+                //finish()
             }
+            //finish()
         }
-
     }
 
     private fun percentoStrelby() {
@@ -67,10 +83,14 @@ class CvicenieScreen: AppCompatActivity() {
         val daneHodnota = daneTextPole.toIntOrNull()
         val pokusyHodnota = pokusyTextPole.toIntOrNull()
 
-        if(daneTextPole.isNullOrEmpty() || pokusyTextPole.isNullOrEmpty()) {
+        if (daneTextPole.isNullOrEmpty() || pokusyTextPole.isNullOrEmpty()) {
             binding.percentageOfExercise.text = ""
 
-            val toast = Toast.makeText(this, "Please, fill both successfull and all attempts :)", Toast.LENGTH_SHORT)
+            val toast = Toast.makeText(
+                this,
+                "Please, fill both successfull and all attempts :)",
+                Toast.LENGTH_SHORT
+            )
             toast.show()
 
             return
@@ -79,7 +99,8 @@ class CvicenieScreen: AppCompatActivity() {
         if (daneHodnota!! > pokusyHodnota!! && pokusyHodnota != 0) {
             binding.percentageOfExercise.text = ""
 
-            val toast = Toast.makeText(this, "successful > all --> mistake!", Toast.LENGTH_SHORT)
+            val toast =
+                Toast.makeText(this, "successful > all --> mistake!", Toast.LENGTH_SHORT)
             toast.show()
 
             return
@@ -92,7 +113,7 @@ class CvicenieScreen: AppCompatActivity() {
             return
         }
 
-        if ( daneHodnota == 0 ) {
+        if (daneHodnota == 0) {
             displayPercento(0)
             return
         }
@@ -102,7 +123,10 @@ class CvicenieScreen: AppCompatActivity() {
     }
 
     private fun displayPercento(percento: Int) {
-        binding.percentageOfExercise.text = getString(R.string.percentage, percento.toString()+"%")
+        binding.percentageOfExercise.text =
+            getString(R.string.percentage, percento.toString() + "%")
     }
 
+
 }
+

@@ -51,5 +51,20 @@
     <string name="string_name_item">Exercise 1</string>
     <string name="item_all_items">%s</string>
     <string name="string_quote_button_training">+ Training</string>
+    <string name="item_percent_val">%s</string>
+    <string name="lomitko"> / </string>
+    <string name="percento">%</string>
+    <string name="item_succ_attm">%s</string>
+    <string name="text_ball_item">3x3</string>
+    <string name="string_training_date">30.2.2030</string>
+    <string name="string_training_excercise">Exercise 1</string>
+    <string name="size_of_ball">Size of ball</string>
+    <string name="add">Add</string>
+    <string name="plus">+</string>
+    <string name="_10">10</string>
+    <string name="string_name_excercise">Exercise 1</string>
+    <string name="string_hint_all_attem">100</string>
+    <string name="percentage_success">Percentage success</string>
+    <string name="exercise_add">Add</string>
 
 </resources>

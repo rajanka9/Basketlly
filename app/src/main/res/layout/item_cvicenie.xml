@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
 
         android:fontFamily="@font/fredoka_one"
-        android:text="%s"
+        android:text="@string/item_succ_attm"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="@color/black"
@@ -50,11 +50,11 @@
 
     <TextView
         android:id="@+id/item_lomene"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="7dp"
+        android:layout_height="21dp"
 
         android:fontFamily="@font/fredoka_one"
-        android:text="/"
+        android:text="@string/lomitko"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="@color/black"
@@ -89,7 +89,7 @@
 
         android:layout_marginStart="5dp"
         android:fontFamily="@font/fredoka_one"
-        android:text="%s"
+        android:text="@string/item_percent_val"
         android:textAlignment="center"
         android:textAllCaps="true"
 
@@ -101,10 +101,6 @@
         app:layout_constraintStart_toEndOf="@id/item_all_attempts"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!--         app:layout_constraintEnd_toStartOf="@id/item_percentage"
- -->
-
-
     <TextView
         android:id="@+id/item_percentage"
         android:layout_width="wrap_content"
@@ -112,7 +108,7 @@
 
         android:layout_marginEnd="15dp"
         android:fontFamily="@font/fredoka_one"
-        android:text="\%"
+        android:text="@string/percento"
         android:textAlignment="textStart"
         android:textAllCaps="true"
         android:textColor="@color/black"

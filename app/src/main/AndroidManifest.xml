@@ -28,6 +28,7 @@
         + vsetky activity by mali byt v manifeste
 
         screenOrientation aby sa nam neotacala app niektore app to maju takto nastavene naschval (napr. instagram)
+            screen rotaion in manifest - https://www.youtube.com/watch?v=pRg3f0sdHf8
         -->
         <activity android:name=".Quotes"
             android:screenOrientation="portrait"
@@ -47,7 +48,6 @@
             android:screenOrientation="portrait"
 
             />
-
 
     </application>
 

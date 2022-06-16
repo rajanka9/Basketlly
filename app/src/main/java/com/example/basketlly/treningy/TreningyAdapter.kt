@@ -7,8 +7,15 @@ import com.example.basketlly.R
 import com.example.basketlly.data.DataTrening
 import com.example.basketlly.databinding.ItemTreningBinding
 
+
+// Trieda TreningyAdapter, ktora ma za ulohu vytvorit recyclerView s pozadovanym itemom
+
+/* recycler view - https://www.youtube.com/watch?v=-PIKVIJb7Xs
+- https://www.youtube.com/watch?v=HtwDXRWjMcU
+- https://www.youtube.com/watch?v=HtwDXRWjMcU&list=PLQkwcJG4YTCTq1raTb5iMuxnEB06J1VHX&index=21 */
+
 class TreningyAdapter(
-    var treningy: List<DataTrening>
+    val treningy: List<DataTrening>
 ) : RecyclerView.Adapter<TreningyAdapter.TreningyViewHolder>(){
 
     inner class TreningyViewHolder(val binding: ItemTreningBinding) : RecyclerView.ViewHolder(binding.root)
@@ -18,18 +25,15 @@ class TreningyAdapter(
         val layoutInf = LayoutInflater.from(parent.context)
         val binding = ItemTreningBinding.inflate(layoutInf, parent, false)
         return TreningyViewHolder(binding)
-
-        //val view = LayoutInflater.from(parent.context).inflate(R.layout.item_trening, parent, false)
-        //return TreningyViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: TreningyViewHolder, position: Int) {
         holder.binding.apply {
             nameTraining.text = treningy[position].nazov
             dateTrainig.text = treningy[position].datum
+            ballTextTrainig.text = treningy[position].lopta
 
-            val obrazky = arrayOf(R.drawable.background, R.drawable.background_2, R.drawable.background_3)
-
+            //val obrazky = arrayOf(R.drawable.background, R.drawable.background_2, R.drawable.background_3)
             /*when (treningy[position].lopta) {
                 6 -> imageTraining.setImageResource(obrazky[1])
                 7 -> imageTraining.setImageResource(obrazky[2])
