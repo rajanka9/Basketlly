@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:id="@+id/cvicenie_screen"
     >
 
@@ -11,13 +13,12 @@
         android:id="@+id/name_exercise"
         android:background="@color/baby_blue_light"
         android:layout_width="wrap_content"
-        android:layout_height="39sp"
-        android:layout_marginTop="99sp"
+        android:layout_height="39dp"
+        android:layout_marginTop="99dp"
         android:ems="12"
         android:inputType="textPersonName"
-        android:text="Exercise 1"
+        android:hint="@string/string_name_excercise"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/text_successful_attempts"
@@ -33,7 +34,7 @@
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="21sp"
         app:layout_constraintBottom_toTopOf="@+id/number_successful_attempts"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,6 +48,7 @@
         android:layout_marginBottom="10dp"
         android:ems="10"
         android:inputType="number"
+        android:hint="@string/_10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,7 +66,7 @@
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="21sp"
         app:layout_constraintBottom_toTopOf="@+id/number_all_attempts"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,9 +80,9 @@
         android:layout_marginBottom="428dp"
         android:ems="10"
         android:inputType="number"
+        android:hint="@string/string_hint_all_attem"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name_all_attempts"
         />
@@ -95,12 +97,30 @@
         android:textColor="@color/black"
         android:textSize="55sp"
         android:text="@string/percentage"
-        tools:text="50%"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/number_all_attempts"
-        app:layout_constraintBottom_toTopOf="@+id/button_add_exercise"
+        app:layout_constraintBottom_toTopOf="@+id/button_percentage_exercise"
         />
+
+    <Button
+        android:id="@+id/button_percentage_exercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/orange"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/percentage_success"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textColorLink="@color/baby_blue"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button_add_exercise"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/percentage_of_exercise"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/button_add_exercise"
@@ -110,7 +130,7 @@
         android:background="@drawable/rounded_button"
         android:backgroundTint="@color/orange"
         android:fontFamily="sans-serif-medium"
-        android:text="Add"
+        android:text="@string/exercise_add"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textColorLink="@color/baby_blue"
@@ -119,7 +139,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/percentage_of_exercise"
+        app:layout_constraintTop_toBottomOf="@+id/button_percentage_exercise"
         tools:ignore="TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
